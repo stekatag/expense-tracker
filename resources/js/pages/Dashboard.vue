@@ -1,15 +1,10 @@
 <script setup lang="ts">
 import { Head } from '@inertiajs/vue3';
-import AppPagination from '@/components/AppPagination.vue';
 import { FilterX, Pencil, Plus, Trash2 } from 'lucide-vue-next';
-import DateRangePicker from '@/components/DateRangePicker.vue';
+import AppPagination from '@/components/AppPagination.vue';
 import DatePicker from '@/components/DatePicker.vue';
+import DateRangePicker from '@/components/DateRangePicker.vue';
 import InputError from '@/components/InputError.vue';
-import {
-    useExpenseDashboardState,
-    type DashboardPageProps,
-} from '@/composables/useExpenseDashboardState';
-import AppLayout from '@/layouts/AppLayout.vue';
 import { Button } from '@/components/ui/button';
 import {
     Dialog,
@@ -20,6 +15,9 @@ import {
     DialogTitle,
     DialogTrigger,
 } from '@/components/ui/dialog';
+import { useExpenseDashboardState } from '@/composables/useExpenseDashboardState';
+import type { DashboardPageProps } from '@/composables/useExpenseDashboardState';
+import AppLayout from '@/layouts/AppLayout.vue';
 import { dashboard } from '@/routes';
 import type { BreadcrumbItem } from '@/types';
 

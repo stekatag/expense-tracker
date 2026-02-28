@@ -35,7 +35,7 @@ import { store } from '@/routes/register';
                         :tabindex="1"
                         autocomplete="name"
                         name="name"
-                        placeholder="Три имена"
+                        placeholder="Иван Иванов"
                     />
                     <InputError :message="errors.name" />
                 </div>
@@ -49,7 +49,7 @@ import { store } from '@/routes/register';
                         :tabindex="2"
                         autocomplete="email"
                         name="email"
-                        placeholder="email@example.com"
+                        placeholder="ivan.ivanov@example.com"
                     />
                     <InputError :message="errors.email" />
                 </div>

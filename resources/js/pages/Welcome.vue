@@ -30,7 +30,10 @@ withDefaults(
         <header
             class="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-6"
         >
-            <div class="text-lg font-semibold">Expense Tracker</div>
+            <div class="inline-flex items-center gap-2 text-lg font-semibold">
+                <Wallet class="h-5 w-5" />
+                <span>Expense Tracker</span>
+            </div>
 
             <nav class="flex items-center gap-3">
                 <a

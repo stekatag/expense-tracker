@@ -1,13 +1,9 @@
 <script setup lang="ts">
 import { Head } from '@inertiajs/vue3';
-import AppPagination from '@/components/AppPagination.vue';
 import { Pencil, Plus, Trash2 } from 'lucide-vue-next';
+import { index as categoriesIndex } from '@/actions/App/Http/Controllers/CategoryController';
+import AppPagination from '@/components/AppPagination.vue';
 import InputError from '@/components/InputError.vue';
-import {
-    useCategoriesPageState,
-    type CategoriesPageProps,
-} from '@/composables/useCategoriesPageState';
-import AppLayout from '@/layouts/AppLayout.vue';
 import { Button } from '@/components/ui/button';
 import {
     Dialog,
@@ -18,8 +14,10 @@ import {
     DialogTitle,
     DialogTrigger,
 } from '@/components/ui/dialog';
+import { useCategoriesPageState } from '@/composables/useCategoriesPageState';
+import type { CategoriesPageProps } from '@/composables/useCategoriesPageState';
+import AppLayout from '@/layouts/AppLayout.vue';
 import { dashboard } from '@/routes';
-import { index as categoriesIndex } from '@/actions/App/Http/Controllers/CategoryController';
 import type { BreadcrumbItem } from '@/types';
 
 const props = defineProps<CategoriesPageProps>();

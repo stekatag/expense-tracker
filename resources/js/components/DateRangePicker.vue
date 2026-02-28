@@ -1,15 +1,13 @@
 <script setup lang="ts">
-import type { DateRange } from 'reka-ui';
-import type { Ref } from 'vue';
-
 import {
     DateFormatter,
     getLocalTimeZone,
     parseDate,
 } from '@internationalized/date';
 import { CalendarIcon } from 'lucide-vue-next';
+import type { DateRange } from 'reka-ui';
 import { computed, ref, watch } from 'vue';
-import { cn } from '@/lib/utils';
+import type { Ref } from 'vue';
 import { Button } from '@/components/ui/button';
 import {
     Popover,
@@ -17,6 +15,7 @@ import {
     PopoverTrigger,
 } from '@/components/ui/popover';
 import { RangeCalendar } from '@/components/ui/range-calendar';
+import { cn } from '@/lib/utils';
 
 const df = new DateFormatter('en-US', {
     dateStyle: 'medium',

@@ -60,7 +60,7 @@ const user = computed(() => page.props.auth.user);
                             :default-value="user.name"
                             required
                             autocomplete="name"
-                            placeholder="Три имена"
+                            placeholder="Иван Иванов"
                         />
                         <InputError class="mt-2" :message="errors.name" />
                     </div>
