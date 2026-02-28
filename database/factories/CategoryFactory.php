@@ -2,7 +2,6 @@
 
 namespace Database\Factories;
 
-use Faker\Factory as FakerFactory;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -15,10 +14,8 @@ class CategoryFactory extends Factory {
      * @return array<string, mixed>
      */
     public function definition(): array {
-        $faker = FakerFactory::create();
-
         return [
-            'name' => $faker->unique()->word(),
+            'name' => $this->faker->unique()->word(),
         ];
     }
 }
