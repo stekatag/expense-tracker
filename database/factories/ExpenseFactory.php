@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Category;
 use App\Models\User;
+use Faker\Factory as FakerFactory;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -16,12 +17,14 @@ class ExpenseFactory extends Factory {
      * @return array<string, mixed>
      */
     public function definition(): array {
+        $faker = FakerFactory::create();
+
         return [
             'user_id' => User::factory(),
             'category_id' => Category::factory(),
-            'amount' => $this->faker->randomFloat(2, 5, 500),
-            'description' => $this->faker->sentence(),
-            'date' => $this->faker->date(),
+            'amount' => $faker->randomFloat(2, 5, 500),
+            'description' => $faker->sentence(),
+            'date' => $faker->date(),
         ];
     }
 }
