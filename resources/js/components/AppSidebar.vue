@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Link } from '@inertiajs/vue3';
-import { BookOpen, FolderGit2, LayoutGrid, Tags } from 'lucide-vue-next';
+import { BookOpen, Github, LayoutGrid, Tags } from 'lucide-vue-next';
 import { index as categoriesIndex } from '@/actions/App/Http/Controllers/CategoryController';
 import AppLogo from '@/components/AppLogo.vue';
 import NavFooter from '@/components/NavFooter.vue';
@@ -35,7 +35,7 @@ const footerNavItems: NavItem[] = [
     {
         title: 'Репозитория',
         href: 'https://github.com/stekatag/expense-tracker',
-        icon: FolderGit2,
+        icon: Github,
     },
     {
         title: 'Документация',
